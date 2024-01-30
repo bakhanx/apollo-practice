@@ -20,7 +20,7 @@ const typeDefs = gql`
     deleteTwwet(id:ID) : Boolean
   }
 `;
-
+// resolve
 const resolvers = {
   Query: {
     allTweets: () => {
