@@ -2,7 +2,9 @@ import { ApolloServer } from "apollo-server";
 import { gql } from "graphql-tag";
 const typeDefs = gql `
   type User {
-    id: ID
+    id: ID!
+    username: String!
+    firstName: Strig
   }
 
   type Tweet {
@@ -11,12 +13,18 @@ const typeDefs = gql `
     author: User
   }
   type Query {
-    allTweet: [Tweet]
+    allTweets: [Tweet!]!
+    tweet(id: ID!): Tweet
+  }
+  type Mutation {
+    postTwwet(text: String!, userId: ID!): Tweet!
+    deleteTwwet(id: ID!): Boolean!
   }
 `;
+// resolve
 const resolvers = {
     Query: {
-        allTweet: () => {
+        allTweets: () => {
             id: 1;
             text: "hello";
         },
