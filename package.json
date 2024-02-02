@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "tsc",
     "start": "npm run compile && node ./dist/index.js",
-    "dev" : "node --no-warnings=ExperimentalWarning --watch --loader ts-node/esm index.ts"
+    "dev": "node --no-warnings=ExperimentalWarning --watch --loader ts-node/esm index.ts"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,8 @@
     "@types/node": "^20.11.10",
     "apollo-server": "^3.13.0",
     "graphql": "^16.8.1",
-    "graphql-tag": "^2.12.6"
+    "graphql-tag": "^2.12.6",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "nodemon": "^3.0.3",
