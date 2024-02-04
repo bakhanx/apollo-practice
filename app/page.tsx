@@ -46,7 +46,7 @@ const Home = async () => {
       <h1 className="text-2xl font-bold">영화</h1>
       {allMovies.map((movie: MovieType) => (
         <li key={movie.id}>
-          <Link href={`/movies/${movie.id}`} >Title : {movie.title}</Link>
+          <Link href={`/movies/${movie.id}`}>Title : {movie.title}</Link>
         </li>
       ))}
 
